@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 
-const mongo_url = "mongodb://127.0.0.1:27017/nie_trainer_node_db?directConnection=true&serverSelectionTimeoutMS=2000"
+const mongo_url = "mongodb://127.0.0.1:27017/nie_doctor_node_db?directConnection=true&serverSelectionTimeoutMS=2000"
 
 const connectToMongo = async () => {
 
@@ -26,9 +26,9 @@ const connectToMongo = async () => {
 
 }
 
-const TrainerModel = (() => {
+const DoctorModel = (() => {
 
-  const collection_name = 'trainer';
+  const collection_name = 'doctor';
 
   const collection_fields = {
 
@@ -60,11 +60,11 @@ const deleteByName = async () => {
 
   connectToMongo();
 
-  const trainer = await TrainerModel.findOne({'name': 'Mona'});
+  const doctor = await DoctorModel.findOne({'name': 'Manu'});
 
-  trainer.phone_number = '8887771122';
+  doctor.phone_number = '906777555';
 
-  const savedTrainer = await TrainerModel.findOneAndDelete({'name': 'Mona'});
+  const savedTrainer = await DoctorModel.findOneAndDelete({'name': 'Manu'});
 
   console.log('Deleted Successfully');
 

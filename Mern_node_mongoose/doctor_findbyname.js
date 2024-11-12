@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 
-const mongo_url = "mongodb://127.0.0.1:27017/nie_trainer_node_db?directConnection=true&serverSelectionTimeoutMS=2000"
+const mongo_url = "mongodb://127.0.0.1:27017/nie_doctor_node_db?directConnection=true&serverSelectionTimeoutMS=2000"
 
 const connectToMongo = async () => {
 
@@ -26,9 +26,9 @@ const connectToMongo = async () => {
 
 }
 
-const TrainerModel = (() => {
+const DoctorModel = (() => {
 
-  const collection_name = 'trainer';
+  const collection_name = 'doctor';
 
   const collection_fields = {
 
@@ -60,9 +60,9 @@ const readByName = async () => {
 
   connectToMongo();
 
-  const trainer = await TrainerModel.findOne({'name': 'swamy'});
+  const doctor = await DoctorModel.findOne({'name': 'Dr.Moksha S'});
 
-  console.log(trainer);
+  console.log(doctor);
 
 };
 

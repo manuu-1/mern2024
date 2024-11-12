@@ -38,10 +38,10 @@ const createDoctor = async () => {
 
   const doctorModel = new DoctorModel({
     _id: new mongoose.Types.ObjectId(), // Generates a new ObjectId for the document
-    name: 'Dr.Moksha S',                  // Name of the doctor
+    name: 'Dr.Manu S',                  // Name of the doctor
     location: 'Mysuru',              // Location of the doctor
-    specialization: 'SURGEON',  // Specialization of the doctor
-    phone_number: '666777555',          // Phone number of the doctor
+    specialization: 'Cardiologist',  // Specialization of the doctor
+    phone_number: '906777555',          // Phone number of the doctor
   });
 
   const createdDocument = await doctorModel.save();
