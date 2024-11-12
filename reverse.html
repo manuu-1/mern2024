@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num">
+    <button onclick="rev()"></button>
+    <input type="text" id="res">
+    <script>
+        function rev(){
+            nu=parseInt(document.getElementById("num").value);
+            while(nu>0){
+                n1=nu%10;
+                nu/10;
+            }
+            console.log(document.getElementById("res").value);
+        }
+    </script>
+</body>
+</html>
