@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-
+// mkgmk
 const mongo_url = "mongodb://127.0.0.1:27017/nie_doctor_node_db?directConnection=true&serverSelectionTimeoutMS=2000"
 
 const connectToMongo = async () => {
